@@ -1,0 +1,930 @@
+*{
+  margin:0;
+  padding:0;
+  font-family:san-seriff;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  scroll-padding-top:2rem;
+}
+
+:root{
+  --bg-color:#131313;
+  --main-color:linear-gradient(to right,#8f0eff,#da22ff);
+  --style-color:linear-gradient(to right,#ff6a00,#ee0979);
+  --btn-color:linear-gradient(to right,#fcb045,#fd1d1d,#833ab4);
+}
+/*navbar section*/
+.navbar{
+  position:sticky;
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  top:0;
+  z-index:99;
+}
+
+.navbar-container{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  max-width:1300px;
+  background:var(--bg-color);
+  height:80px;
+  margin:0 auto;
+  padding:0 50px;
+  z-index:1;
+}
+
+.navbar-logo{
+  background-color:#ff8177;
+  background-image:linear-gradient(to top,#ff0844 0%,#ffb199 100%);
+  background-size:100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  -moz-text-fill-color: transparent;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  text-decoration:none;
+  font-size:2rem;
+}
+
+.mealtime-menu{
+    display:flex;
+    align-items: center;
+    list-style: none;
+}
+
+.mealtime-menu-item{
+    height:80px;
+}
+
+.mealtime-links{
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:125px;
+    text-decoration:none;
+    height:100%;
+    transition:all 0.3s ease;
+}
+
+#mealtime-cart-logo{
+  display:flex;
+  align-items:center;
+  font-size:3.0rem;
+  cursor:pointer;
+  color:#ff8177;
+}
+
+.mealtime-links:hover{
+  color:#9518fc;
+  transition:all 0.3s ease;
+}
+
+@media screen and (max-width:920px){
+  .navbar-container{
+        display:flex;
+        justify-content:space-between;
+        height:80px;
+        z-index:1;
+        width:100%;
+        max-width:1300px;
+        padding:0;
+  }
+  
+  .mealtime-menu{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content:center;
+        align-items:center
+        margin:0;
+        width:100%;
+        position: absolute;
+        top: -1000px;
+        opacity:1;
+        z-index:1;
+        transition:all 0.5s ease;
+  }
+  
+  .mealtime-menu.active{
+        background:#131313;
+        top:100%;
+        opacity:1;
+        transition:all 0.5s ease;
+        z-index:99;
+        height:60vh;
+        font-size:1.6rem;
+  }
+  
+  .navbar-logo{
+    padding-left:25px;
+  }
+  
+  .navbar-toggle .bar{
+    display:block;
+    width:30px;
+    height:3px;
+    margin:8px auto;
+    transition:all 0.3s ease-in-out;
+    background:#fff;
+    cursor:pointer;
+  }
+  
+  #mobile-menu{
+    position:absolute;
+    top:20%;
+    right:5%;
+    transform:translate(5%,20%);
+}
+  
+  #mealtime-cart-logo{
+    margin-right:50px;
+}
+  
+  #mobile-menu.isactive .bar:nth-child(2){
+    opacity:0;
+  }
+  
+  #mobile-menu.isactive .bar:nth-child(1){
+    transform:translateY(11px) rotate(45deg);
+  }
+  
+  #mobile-menu.isactive .bar:nth-child(3){
+    transform:translateY(-11px) rotate(-45deg);
+  }
+  
+  .mealtime-cart{
+    width:320px;
+  }
+}
+
+/*home section*/
+.mealtime-home{
+  background:#000000;
+  background:linear-gradient(to right,#161616,#000000 );
+  padding:200px 0; 
+}
+
+.mealtime-home-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    max-width:1200px;
+    margin:0 auto;
+    height:90%;
+    text-align:center;
+    padding:30px;
+}
+
+.mealtime-home-heading{
+    font-size:100px;
+    color: #fff;
+    margin-bottom:24px;
+}
+
+.mealtime-home-heading span{
+    background:#ee0979;
+    background:-webkit-linear-gradient(to right,#ff6a00,#ee0979);
+    background:linear-gradient(to right,#ff6a00,#ee0979);
+    background-size:100%;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+}
+
+.mealtime-home-description{
+    font-size:60px;
+    background:#da22ff;
+    background:-webkit-linear-gradient(to right,#9114ff,#da22ff);
+    background:linear-gradient(to right,#8f0eff,#da22ff);
+    background-size:100%;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -moz-text-fill-color:transparent;
+}
+
+.mealtime-home-button{
+    font-size:1.8rem;
+    background:#833ab4;
+    background:-webkit-linear-gradient(to right,#fcb045,#fd1d1d,#833ab4);
+    background:linear-gradient(to right,#fcb045,#fd1d1d,#833ab4);
+    border:none;
+    border-radius:4px;
+    padding:20px 60px;
+    margin-top:2rem;
+    cursor:pointer;
+    position:relative;
+    transition:all 0.35s;
+    outline:none;
+}
+
+.mealtime-home-button a{
+    position:relative;
+    z-index:2;
+    color:#fff;
+    text-decoration:none;
+}
+
+.mealtime-home-button:hover{
+  color:#fff;
+}
+
+@media screen and (max-width:960px){
+  .mealtime-home-heading{
+    font-size:60px;
+  }
+  
+  .mealtime-home-description{
+    font-size:40px;
+  }
+}
+
+/*breakfast,lunch and dinner sections*/
+.mealtime-breakfast,
+.mealtime-lunch,
+.mealtime-dinner{
+  background:#000000;
+  background:linear-gradient(to right,#161616,#000000 );
+  padding:200px 0; 
+}
+
+.mealtime-breakfast-container,
+.mealtime-lunch-container,
+.mealtime-dinner-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    max-width:1200px;
+    margin:0 auto;
+    height:90%;
+    text-align:center;
+    padding:30px;
+}
+
+.mealtime-breakfast-heading,
+.mealtime-lunch-heading,
+.mealtime-dinner-heading{
+    font-size:50px;
+    background:linear-gradient(to right,#ff6a00,#ee0979);
+    background-size:100%;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+}
+
+.mealtime-breakfast-description,
+.mealtime-lunch-description,
+.mealtime-dinner-description{
+    font-size:40px;
+    background:#da22ff;
+    background:-webkit-linear-gradient(to right,#9114ff,#da22ff);
+    background:linear-gradient(to right,#8f0eff,#da22ff);
+    background-size:100%;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -moz-text-fill-color:transparent;
+}
+
+.breakfast-container,
+.lunch-container,
+.dinner-container{
+  position:relative;
+  width:700px;
+  height:700px;
+}
+
+.breakfast-tray-element,
+.lunch-tray-element,
+.dinner-tray-element{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:320px;
+  height:320px;
+  z-index:10;
+}
+
+.breakfast-trayelement-item,
+.lunch-trayelement-item,
+.dinner-trayelement-item{
+  position:absolute;
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:100%;
+  padding:10px;
+  transition:2000ms ease-in;
+  font-size:2.2rem;
+  background:lightgrey;
+  border-radius:10px;
+}
+
+
+.breakfast-trayelement-item.show,
+.lunch-trayelement-item.show,
+.dinner-trayelement-item.show{
+  display:block;
+  animation-name:trayzoom;
+  animation-duration:2000ms;
+  animation-timing-function:linear;
+  animation-iteration-count:1;
+}
+
+@keyframes trayzoom{
+  from{
+    opacity:0;
+    transform:rotate(-90deg);
+    transition:2000ms ease;
+  }
+  to{
+    opacity:1;
+    transition:2000ms ease;
+  }
+}
+
+
+.breakfast-trayelement-item .breakfast-img,
+.lunch-trayelement-item .lunch-img,
+.dinner-trayelement-item .dinner-img{
+  width:100%;
+  height:200px;
+}
+
+.breakfast-trayelement-item .breakfast-img img,
+.lunch-trayelement-item .lunch-img img,
+.dinner-trayelement-item .dinner-img img{
+  width:100%;
+  height:100%;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+}
+
+.breakfast-trayelement-item .mealtime-details, 
+.lunch-trayelement-item .mealtime-details,
+.dinner-trayelement-item .mealtime-details{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:5px;
+  width:100%;
+  height:50px;
+}
+
+.mealtime-details .mealtime-product-title{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.mealtime-details .mealtime-product-price{
+  font-size:30px;
+  font-weight:bold;
+}
+
+.breakfast-trayelement-item .mealtime-add-tocart,
+.lunch-trayelement-item .mealtime-add-tocart,
+.dinner-trayelement-item .mealtime-add-tocart{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:60px;
+  border:none;
+  outline:none;
+  background:var(--btn-color);
+  cursor:pointer;
+  z-index:5;
+}
+
+.mealtime-add-tocart #mealtime-cart-add{
+  color:white;
+  font-size:3.0rem;
+}
+
+.breakfast-tray-wrapper,
+.lunch-tray-wrapper,
+.dinner-tray-wrapper{
+  position:absolute;
+  margin-top:100px;
+  margin-left:100px;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  border-top:20px dotted red;
+  border-left:20px dotted yellow;
+  border-right:20px dotted blue;
+  border-bottom:20px dotted green;
+  transform:rotate(0deg);
+  transition:ease 2800ms;
+}
+
+.breakfast-traywrapper-items,
+.lunch-traywrapper-items,
+.dinner-traywrapper-items{
+  position:absolute;
+  width:630px;
+  height:630px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.breakfast-traywrapper-item,
+.lunch-traywrapper-item,
+.dinner-traywrapper-item{
+    --rotation:0;
+  position:absolute;
+  width:100%;
+  height:100%;
+  text-align:center;
+  transform:rotate(var(--rotation));
+}
+
+.breakfast-traywrapper-item img,
+.lunch-traywrapper-item img,
+.dinner-traywrapper-item img{
+  width:150px;
+  height:150px;
+  border-radius:40%;
+}
+
+.breakfast-traywrapper-items .item1,
+.lunch-traywrapper-items .item1,
+.dinner-traywrapper-items .item1{--rotation:90deg;}
+.breakfast-traywrapper-items .item2,
+.lunch-traywrapper-items .item2,
+.dinner-traywrapper-items .item2{--rotation:180deg;}
+.breakfast-traywrapper-items .item3,
+.lunch-traywrapper-items .item3,
+.dinner-traywrapper-items .item3{--rotation:270deg;}
+.breakfast-traywrapper-items .item4,
+.lunch-traywrapper-items .item4,
+.dinner-traywrapper-items .item4{--rotation:360deg;}
+
+.breakfast-traycontrol-btn,
+.lunch-traycontrol-btn,
+.dinner-traycontrol-btn{
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:450px;
+  height:80px;
+  padding:10px;
+  z-index:5;
+}
+
+.breakfast-traycontrol-btn button,
+.lunch-traycontrol-btn button,
+.dinner-traycontrol-btn button{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:80px;
+  height:70px;
+  border:none;
+  outline:none;
+  border-radius:10px;
+  font-size:50px;
+  cursor:pointer;
+  background:var(--btn-color);
+}
+
+@media screen and (max-width:960px){
+  .mealtime-breakfast-heading,
+  .mealtime-lunch-heading,
+  .mealtime-dinner-heading{
+    font-size:40px;
+  }
+  
+  .mealtime-breakfast-description,
+  .mealtime-lunch-description,
+  .mealtime-dinner-description{
+    font-size:30px;
+  }
+  
+  .breakfast-tray-element,
+  .lunch-tray-element,
+  .dinner-tray-element{
+    width:220px;
+    height:220px;
+  }
+  
+  .breakfast-trayelement-item .breakfast-img,
+  .lunch-trayelement-item .lunch-img,
+  .dinner-trayelement-item .dinner-img{
+    width:100%;
+    height:130px;
+  }
+  
+  .breakfast-trayelement-item .mealtime-details, 
+  .lunch-trayelement-item .mealtime-details,
+  .dinner-trayelement-item .mealtime-details{
+    width:100%;
+    height:30px;
+  }
+  
+  .mealtime-details .mealtime-product-title{
+  font-size:15px;
+  font-weight:bold;
+}
+
+  .mealtime-details .mealtime-product-price{
+  font-size:20px;
+  font-weight:bold;
+}
+  
+  .breakfast-trayelement-item .mealtime-add-tocart,
+  .lunch-trayelement-item .mealtime-add-tocart,
+  .dinner-trayelement-item .mealtime-add-tocart{
+  height:40px;
+}
+  
+  .mealtime-add-tocart #mealtime-cart-add{
+    font-size:2.4rem;
+  }
+  
+  .breakfast-tray-wrapper,
+  .lunch-tray-wrapper,
+  .dinner-tray-wrapper{
+    position:absolute;
+    margin-top:175px;
+    margin-left:175px;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    border-top:10px dotted red;
+    border-left:10px dotted yellow;
+    border-right:10px dotted blue;
+    border-bottom:10px dotted green;
+    transform:rotate(0deg);
+    transition:ease 2800ms;
+}
+  
+  .breakfast-traywrapper-items,
+  .lunch-traywrapper-items,
+  .dinner-traywrapper-items{
+  position:absolute;
+  width:400px;
+  height:400px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+  
+  .breakfast-traywrapper-item img,
+  .lunch-traywrapper-item img,
+  .dinner-traywrapper-item img{
+  width:80px;
+  height:80px;
+  border-radius:40%;
+}
+  
+  .breakfast-traycontrol-btn,
+  .lunch-traycontrol-btn,
+  .dinner-traycontrol-btn{
+    width:400px;
+  }
+}
+
+/*cart section*/
+.mealtime-cart{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:360px;
+  min-height:100vh;
+  background:lightgrey;
+  transition:450ms ease-in-out;
+}
+
+.mealtime-cart.active{
+  right:0;
+  transition:450ms ease-in-out;
+}
+
+.mealtime-close-cart{
+  position:absolute;
+  top:1rem;
+  left:0.8rem;
+  color:red;
+  font-size:2rem;
+  cursor:pointer;
+}
+
+.mealtime-cart-title {
+    text-align:center;
+    font-size:1.5rem;
+    font-weight:600;
+    margin-top:2rem;
+    color:blue;
+}
+
+.cart-box{
+    display:grid;
+    grid-template-columns:32% 50% 18%;
+    align-items:center;
+    gap:1rem;
+    margin-top:1rem;
+}
+
+.cart-img {
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    padding:10px;
+}
+
+.detail-box{
+    display:grid;
+    row-gap:0.5rem;
+    z-index:5;
+}
+
+.cart-product-title {
+    font-size:1rem;
+    text-transform:uppercase;
+}
+
+.cart-price {
+    font-weight:500;
+}
+
+.cart-quantity {
+    border:1px solid var(--text-color);
+    outline-color:var(--main-color);
+    width:2.4rem;
+    text-align:center;
+    font-size:1rem;
+}
+
+#cart-remove {
+    font-size:24px;
+    cursor: pointer;
+    color:red;
+    z-index:3;
+}
+
+.mealtime-cart-total {
+    display:flex;
+    justify-content:flex-end;
+    margin-top:1.5rem;
+    border-top:2px solid var(--bg-color);
+}
+
+.mealtime-total-title {
+    font-size:1rem;
+    font-weight:600;
+}
+
+.mealtime-total-price {
+    margin-left: 0.5rem;
+}
+
+.mealtime-buy-btn{
+    display:flex;
+    margin:1.5rem auto 0 auto;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:var(--main-color);
+    color:var(--bg-color);
+    font-size:1rem;
+    font-weight:500;
+    cursor: pointer;
+    transition:0.3s ease-in-out;
+}
+
+.btn-buy:hover{
+    background: var(--text-color);
+    transition:0.3s ease-in-out;
+    transform: scale(1.15);
+}
+
+@media screen and (max-width:920px){
+  .mealtime-cart{
+  position:fixed;
+  top:0;
+  left:-100%;
+  width:360px;
+  min-height:100vh;
+  background:lightgrey;
+  transition:450ms ease-in-out;
+}
+
+.mealtime-cart.active{
+  left:8%;
+  transition:450ms ease-in-out;
+}
+}
+
+/*about section*/
+.mealtime-about{
+  background:#000000;
+  background:linear-gradient(to right,#161616,#000000 );
+  padding:200px 0; 
+}
+
+.mealtime-about-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    max-width:1200px;
+    margin:0 auto;
+    height:90%;
+    text-align:center;
+    padding:30px;
+}
+
+.mealtime-about-heading{
+    font-size:50px;
+    background:linear-gradient(to right,#ff6a00,#ee0979);
+    background-size:100%;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+     margin-bottom:50px;
+}
+
+.mealtime-about-description{
+    font-size:40px;
+    background:#da22ff;
+    background:-webkit-linear-gradient(to right,#9114ff,#da22ff);
+    background:linear-gradient(to right,#8f0eff,#da22ff);
+    background-size:100%;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -moz-text-fill-color:transparent;
+    margin-bottom:50px;
+}
+
+.mealtime-about-image{    
+    margin:10px;
+    height:500px;
+    width:500px;
+    border-radius:4px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    color:#fff;
+    margin-bottom:40px;
+}
+
+.mealtime-about-image img{
+  width:100%;
+  height:100%;
+  border-radius:10px;
+}
+
+
+@media screen and (max-width:920px){
+  .mealtime-about-heading{
+    font-size:40px;
+  }
+  
+  .mealtime-about-description{
+    font-size:30px;
+  }
+  
+  .mealtime-about-image{
+    width:350px;
+    height:350px;
+  }
+}
+
+/*footer section*/
+.mealtime-footer-container{
+    background-color:var(--bg-color);
+    display:flex;
+    padding:5rem 0;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.mealtime-footer-links{
+    width:100%;
+    max-width:1000px;
+    display:flex;
+    justify-content:center;
+}
+
+.mealtime-footerlinks-wrapper{
+  display:flex;
+}
+
+.mealtime-footerlinks-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:16px;
+    text-align:left;
+    width:160px;
+    box-sizing:border-box;
+}
+
+.mealtime-footerlinks-item h2{
+  margin-bottom:16px;
+  color:#fff;
+}
+
+.mealtime-footerlinks-item a{
+    color:#fff;
+    margin-bottom:0.5rem;
+    text-decoration:none;
+    transition:0.3s ease-out;
+}
+
+.mealtime-footerlinks-item a:hover{
+    color:#e9e9e9;
+    transition:0.3s ease-out;
+}
+
+.mealtime-social-media{
+    width:100%;
+    max-width:1000px;
+    display:flex;
+    justify-content:center;
+}
+
+.mealtime-socialmedia-wrapper{
+    width:90%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+#mealtime-footer-logo{
+    color:#fff;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:2rem;
+}
+
+.mealtime-website-right{
+  color:#fff;
+}
+
+#mealtime-copyright{
+  color:#fff;
+  font-size:1rem;
+}
+
+.mealtime-socialmedia-icons{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:240px;
+}
+
+.mealtime-social-links{
+  color:#fff;
+  font-size:24px;
+}
+
+@media screen and (max-width:920px){
+  .mealtime-footer-links{
+    padding-top:2rem;
+  }
+  
+  .mealtime-footerlinks-wrapper{
+    flex-direction:column;
+  }
+  
+  .mealtime-socialmedia-wrapper{
+    flex-direction:column;
+  }
+  
+  #mealtime-footer-logo{
+    margin-top:1rem;
+    margin-bottom:1rem;
+  }
+  
+  .mealtime-website-right{
+    margin-bottom:1rem;
+  }
+}

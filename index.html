@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="app.css"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Meal Time</title>
+</head>
+<body>
+  <!-Navbar section->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+      <a href="#home" id="mealtime-logo">MealTime</a>
+    </div>
+      <div class="navbar-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    <ul class="mealtime-menu">
+      <li class="mealtime-menu-items">
+        <a href="#home" class="mealtime-links" id="home-page">HOME</a>
+      </li>
+      <li class="mealtime-menu-items">
+        <a href="#breakfast" class="mealtime-links" id="breakfast-page">BREAKFAST</a>
+      </li>
+      <li class="mealtime-menu-items">
+        <a href="#lunch" class="mealtime-links" id="lunch-page">LUNCH</a>
+      </li>
+      <li class="mealtime-menu-items">
+        <a href="#dinner" class="mealtime-links" id="dinner-page">DINNER</a>
+      </li>
+      <li class="mealtime-menu-items">
+        <a href="#about" class="mealtime-links" id="about-page">ABOUT</a>
+      </li>
+    </ul>
+      <i class="bx bx-cart" id="mealtime-cart-logo"></i>   
+     <div class="mealtime-cart">
+       <div class="mealtime-close-cart">&times;</div>
+      <p class="mealtime-cart-title">MealTime Cart</p>
+      <div class="mealtime-cart-content"></div>
+      <div class="mealtime-cart-total">
+        <div class="mealtime-total-title">Total:</div>
+        <div class="mealtime-total-price">$</div>
+      </div>
+       <button class="mealtime-buy-btn">Buy</button>
+    </div>   
+    </div> 
+  </nav>
+    <!-home section->
+      <div class="mealtime-home" id="home">
+        <div class="mealtime-home-container">
+          <h1 class="mealtime-home-heading">Unforgetable meals that <span>satisfies your tastebuds</span></h1>
+          <p class="mealtime-home-description">We strive to provide you with the best cusines available through the services of our experienced chefs.</p>
+          <button class="mealtime-home-button"><a href="#breakfast">EXPLORE</a></button>
+        </div>
+        <!-breakfast section->
+          <div class="mealtime-breakfast" id="breakfast">
+            <div class="mealtime-breakfast-container">
+              <h1 class="mealtime-breakfast-heading">Energy Breakfast!!!</h1>
+              <p class="mealtime-breakfast-description">Start your day with our sublime selection of energy boosting and mind stimulating meals</p>
+              <div class="breakfast-container">
+                 <div class="breakfast-traycontrol-btn">
+                    <button class="breakfast-traycontrol-backward"><i class="bx bx-rotate-left" id="breakfast-tray-backward"></i></button>
+                    <button class="breakfast-traycontrol-forward"><i class="bx bx-rotate-right" id="breakfast-tray-forward"></i></button>
+                  </div>
+                <div class="breakfast-tray-element">
+                  <div class="breakfast-trayelement-item show" data-element="show">
+                    <div class="breakfast-img">
+                      <img src="images/cocktail.jpg" alt="breakfast cocktail" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Cocktail</p>
+                      <p class="mealtime-product-price">$12.45</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                    <div class="breakfast-trayelement-item" data-element="show">
+                    <div class="breakfast-img">
+                      <img src="images/flavoured-tea.jpg" alt="breakfast cocktail" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Flavoured Tea</p>
+                      <p class="mealtime-product-price">$10.37</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                    <div class="breakfast-trayelement-item" data-element="show">
+                    <div class="breakfast-img">
+                      <img src="images/coffee.jpg" alt="breakfast cocktail" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Coffee</p>
+                      <p class="mealtime-product-price">$11.50</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                    <div class="breakfast-trayelement-item" data-element="show">
+                    <div class="breakfast-img">
+                      <img src="images/appetizer.jpg" alt="breakfast cocktail" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Appetizer</p>
+                      <p class="mealtime-product-price">$16.78</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                </div>
+                <div class="breakfast-tray-wrapper">
+                  <div class="breakfast-traywrapper-items">
+                    <div class="breakfast-traywrapper-item item1">
+                      <img src="images/appetizer.jpg" alt="breakfast cocktail">
+                    </div>
+                    <div class="breakfast-traywrapper-item item2">
+                      <img src="images/coffee.jpg" alt="breakfast coffee">
+                    </div>
+                    <div class="breakfast-traywrapper-item item3">
+                      <img src="images/flavoured-tea.jpg" alt="breakfast tea">
+                    </div>
+                    <div class="breakfast-traywrapper-item item4">
+                      <img src="images/cocktail.jpg" alt="breakfast cocktail">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-lunch section->
+            <div class="mealtime-lunch" id="lunch">
+            <div class="mealtime-lunch-container">
+              <h1 class="mealtime-lunch-heading">Refuel and Recharge Lunch!!!</h1>
+              <p class="mealtime-lunch-description">Getting tired already? Do not worry because our carefully selected lunch pack is just what you need!!!</p>
+              <div class="lunch-container">
+                 <div class="lunch-traycontrol-btn">
+                    <button class="lunch-traycontrol-backward"><i class="bx bx-rotate-left" id="lunch-tray-backward"></i></button>
+                    <button class="lunch-traycontrol-forward"><i class="bx bx-rotate-right" id="lunch-tray-forward"></i></button>
+                  </div>
+                <div class="lunch-tray-element">
+                  <div class="lunch-trayelement-item show" data-element="show">
+                    <div class="lunch-img">
+                      <img src="images/good-lunch.jpg" alt="yam pudding" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Yam Pudding</p>
+                      <p class="mealtime-product-price">$35.45</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                    <div class="lunch-trayelement-item" data-element="show">
+                    <div class="lunch-img">
+                      <img src="images/jollof-rice.jpg" alt="jollof rice" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Jollof rice</p>
+                      <p class="mealtime-product-price">$20.37</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                    <div class="lunch-trayelement-item" data-element="show">
+                    <div class="lunch-img">
+                      <img src="images/noodles.jpg" alt="noodles" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Noodles</p>
+                      <p class="mealtime-product-price">$16.50</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                    <div class="lunch-trayelement-item" data-element="show">
+                    <div class="lunch-img">
+                      <img src="images/solid-food.jpg" alt="Macaroni" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Macaroni</p>
+                      <p class="mealtime-product-price">$26.36</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                </div>
+                <div class="lunch-tray-wrapper">
+                  <div class="lunch-traywrapper-items">
+                    <div class="lunch-traywrapper-item item1">
+                        <img src="images/solid-food.jpg" alt="Macaroni">
+                    </div>
+                    <div class="lunch-traywrapper-item item2">
+                      <img src="images/noodles.jpg" alt="noodles">
+                    </div>
+                    <div class="lunch-traywrapper-item item3">
+                      <img src="images/jollof-rice.jpg" alt="jollof rice">
+                    </div>
+                    <div class="lunch-traywrapper-item item4">
+                      <img src="images/good-lunch.jpg" alt="yam pudding">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-dinner section->
+             <div class="mealtime-dinner" id="dinner">
+            <div class="mealtime-dinner-container">
+              <h1 class="mealtime-dinner-heading">Reinvigorating Dinner!!!</h1>
+              <p class="mealtime-dinner-description">Exhuasted from work?Get your energy levels up immediately with our exquisite selection of delicious dinner treats!!!</p>
+              <div class="dinner-container">
+                 <div class="dinner-traycontrol-btn">
+                    <button class="dinner-traycontrol-backward"><i class="bx bx-rotate-left" id="dinner-tray-backward"></i></button>
+                    <button class="dinner-traycontrol-forward"><i class="bx bx-rotate-right" id="dinner-tray-forward"></i></button>
+                  </div>
+                <div class="dinner-tray-element">
+                  <div class="dinner-trayelement-item show" data-element="show">
+                    <div class="dinner-img">
+                      <img src="images/desert.jpg" alt="Desert" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Desert</p>
+                      <p class="mealtime-product-price">$28.45</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                    <div class="dinner-trayelement-item" data-element="show">
+                    <div class="dinner-img">
+                      <img src="images/proper-dinner.jpg" alt="fruit salad" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Fruit Salad</p>
+                      <p class="mealtime-product-price">$30.37</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                    <div class="dinner-trayelement-item" data-element="show">
+                    <div class="dinner-img">
+                      <img src="images/wine-glass.jpg" alt="glass of wine" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Glass of Wine</p>
+                      <p class="mealtime-product-price">$3.50</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                    <div class="dinner-trayelement-item" data-element="show">
+                    <div class="dinner-img">
+                      <img src="images/jollof-rice.jpg" alt="jollof rice" class="product-img">
+                    </div>
+                    <div class="mealtime-details">
+                      <p class="mealtime-product-title">Jollof rice</p>
+                      <p class="mealtime-product-price">$20.37</p>                      
+                    </div>
+                    <button class="mealtime-add-tocart"><i class="bx bxs-cart-add" id="mealtime-cart-add"></i> </button>
+                  </div>
+                </div>
+                <div class="dinner-tray-wrapper">
+                  <div class="dinner-traywrapper-items">
+                    <div class="dinner-traywrapper-item item1">
+                        <img src="images/jollof-rice.jpg" alt="jollof rice">
+                    </div>
+                    <div class="dinner-traywrapper-item item2">
+                      <img src="images/wine-glass.jpg" alt="glass of wine">
+                    </div>
+                    <div class="dinner-traywrapper-item item3">
+                      <img src="images/proper-dinner.jpg" alt="proper dinner">
+                    </div>
+                    <div class="dinner-traywrapper-item item4">
+                      <img src="images/desert.jpg" alt="desert">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-about section->
+              <div class="mealtime-about" id="about">
+                <div class="mealtime-about-container">
+                  <h1 class="mealtime-about-heading">ABOUT US</h1>
+                  <div class="mealtime-about-wrapper">
+                    <div class="mealtime-about-image">
+                      <img src="images/food-view.jpg" alt="about picture1">
+                    </div>
+                    <p class="mealtime-about-description">Our unwavering commitment to hygiene sets us apart from the rest.</p>
+                  </div>
+                  <div class="mealtime-about-wrapper">
+                    <div class="mealtime-about-image">
+                      <img src="images/food-table.jpg" alt="about-picture2">
+                    </div>
+                    <p class="mealtime-about-description">Honesty and Integrity are values that define our everyday operations.</p>
+                  </div>
+                </div>
+              </div>
+          <!-footer section->  
+            <div class="mealtime-footer-container">
+              <div class="mealtime-footer-links">
+                <div class="mealtime-footerlinks-wrapper">
+                  <div class="mealtime-footerlinks-item">
+                    <h2>About Us</h2>
+                     <a href="#">How it works</a>
+                     <a href="#">Testimonial</a>
+                     <a href="#">Terms of Service</a>
+                     <a href="#">Careers</a>
+                  </div>
+                  <div class="mealtime-footerlinks-item">
+                    <h2>Contact Us</h2>
+                     <a href="#">Contact</a>
+                     <a href="#">Support</a>
+                     <a href="#">Suggestions</a>
+                     <a href="#">Referrals</a>
+                  </div>
+                </div>
+                <div class="mealtime-footerlinks-wrapper">
+                  <div class="mealtime-footerlinks-item">
+                    <h2>Social Media</h2>
+                     <a href="#">Facebook</a>
+                     <a href="#">Instagram</a>
+                     <a href="#">Youtube</a>
+                     <a href="#">Whatsapp</a>
+                  </div>
+                  <div class="mealtime-footerlinks-item">
+                    <h2>Recipes</h2>
+                     <a href="#">Submit Recipes</a>
+                     <a href="#">Recipe Ambassador</a>
+                     <a href="#">Suggestions</a>
+                     <a href="#">Criticism</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mealtime-social-media">
+                <div class="mealtime-socialmedia-wrapper">
+                  <div class="mealtime-footer-logo">
+                    <a href="#" id="mealtime-footer-logo">MEALTIME</a>
+                  </div>
+                  <p class="mealtime-website-right"><i class="bx bx-copyright" id="mealtime-copyright"></i>MEALTIME 2024.All rights reserved.</p>
+                  <div class="mealtime-socialmedia-icons">
+                    <a href="#" class="mealtime-social-links" target="blank"><i class="bx bxl-facebook-circle" id="mealtime-facebook-logo"></i></a>
+                    <a href="#" class="mealtime-social-links" target="blank"><i class="bx bxl-instagram" id="mealtime-instagram-logo"></i></a>
+                    <a href="#" class="mealtime-social-links" target="blank"><i class="bx bxl-youtube" id="mealtime-youtube-logo"></i></a>
+                    <a href="#" class="mealtime-social-links" target="blank"><i class="bx bxl-whatsapp" id="mealtime-whatsapp-logo"></i></a>
+                    <a href="#" class="mealtime-social-links" target="blank"><i class="bx bxl-linkedin" id="mealtime-linkedin-logo"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-footer section ends->
+      </div> 
+</body>
+<script src="script.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</html>
